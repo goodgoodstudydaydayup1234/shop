@@ -8,7 +8,9 @@
     名字：{{cpu.cname}}<br><br>
     系列：{{cpu.cmodel}}<br><br>
     价格：{{cpu.cprice}}<br><br>
-    <a href="/list/">返回列表页</a><br><br>
-    <a href="/">返回首页</a><br>
+    <!--<a href="/list/">返回列表页</a><br><br>-->
+    <!--<a href="/">返回首页</a><br>-->
+    <a href="{% url 'shop1:list' %}">返回列表页</a><br><br>
+    <a href="{% url 'shop1:index' %}">返回首页</a><br>
 </body>
 </html>

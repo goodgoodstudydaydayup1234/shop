@@ -7,12 +7,14 @@
 <body>
     <ul>
         {% for cpu in cpulist %}
-            <li><a href="/detail/{{cpu.id}}/">{{cpu.cname}}</a></li>
+            <!--<li><a href="/detail/{{cpu.id}}/">{{cpu.cname}}</a></li>-->
+            <li><a href="{% url 'shop1:detail' cpu.id %}">{{cpu.cname}}</a></li>
         <br>
         {% empty %}
             暂无cpu相关信息
         {% endfor %}
-        <a href="/">返回首页</a>
+        <!--<a href="/">返回首页</a>-->
+        <a href="{% url 'shop1:index' %}">返回首页</a>
     </ul>
 
 
