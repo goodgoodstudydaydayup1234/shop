@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表页</title>
+</head>
+<body>
+    <ul>
+        {% for cpu in cpulist %}
+            <li><a href="/detail/{{cpu.id}}/">{{cpu.cname}}</a></li>
+        <br>
+        {% empty %}
+            暂无cpu相关信息
+        {% endfor %}
+        <a href="/">返回首页</a>
+    </ul>
+
+
+</body>
+</html>
